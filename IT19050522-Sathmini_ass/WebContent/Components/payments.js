@@ -91,16 +91,38 @@ function validateItemForm()
 	 return "Insert product ID.";
 	 } 
 	
+	// is numerical value
+	var nmProduct = $("#productID").val().trim();
+	if (!$.isNumeric(nmProduct))
+	 {
+	 return "Insert a numerical value for product ID.";
+	 }
+	
+	
 	// CREDIT NUMBER
 	if ($("#creditNumber").val().trim() == "")
 	 {
 	 return "Insert creditNumber.";
+	 }
+	
+	// is numerical value
+	var nmCredit = $("#creditNumber").val().trim();
+	if (!$.isNumeric(nmCredit))
+	 {
+	 return "Insert a numerical value for credit Number.";
 	 }
 
 	// CVV
 	if ($("#cvv").val().trim() == "")
 	 {
 	 return "Insert cvv.";
+	 }
+	
+	// is numerical value
+	var nmCvv = $("#cvv").val().trim();
+	if (!$.isNumeric(tmpCvv))
+	 {
+	 return "Insert a numerical value for cvv.";
 	 }
 	
 	//CHECK EXPIRE DATE
