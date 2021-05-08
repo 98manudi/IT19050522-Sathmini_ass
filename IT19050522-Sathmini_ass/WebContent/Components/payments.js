@@ -114,6 +114,17 @@ function validateItemForm()
 	 {
 	 return "Insert date.";
 	 }
+	//validate date
+	var sdate=$("#date").val();
+	sdate=new Date(sdate).getTime();
+	
+	var edate=$("#expireDate").val();
+	edate=new Date(edate).getTime();
+	
+	if(edate<sdate)
+	{
+		return "Invalid dates..end date should be greater than start date";
+	}
 	
 	// AMOUNT
 	if ($("#amount").val().trim() == "")
